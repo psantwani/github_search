@@ -208,23 +208,23 @@ function insertSearchBox(){
   }
 
   function userAction(username, repo, branch){
-  	
-  	var selected = $('.easy-autocomplete-container ul li.selected')[0];	
+  	var textBoxValue = $(".github_search_box")[0].value;
+    var selected = $('.easy-autocomplete-container ul li.selected')[0];	
   	if(selected){
   		var name = $(selected).find(".github_search_item_name")[0].innerHTML;
-  		var path = $(selected).find(".github_search_item_path")[0].innerHTML;
-  		var size = $(selected).find(".github_search_item_size")[0].innerHTML;
-
-  		if(name === "/"){
-  			location.href = path;
-  		}		
-  		else if(size === "folder"){
-  			location.href = "https://github.com/" + username + "/" + repo + "/" + "tree/" + branch + "/" + path;
-  		}
-  		else{			
-  			location.href = "https://github.com/" + username + "/" + repo + "/" + "blob/" + branch + "/" + path;							
-  		}
-
+      if(name === textBoxValue){
+        var path = $(selected).find(".github_search_item_path")[0].innerHTML;
+        var size = $(selected).find(".github_search_item_size")[0].innerHTML;
+        if(name === "/"){
+          location.href = path;
+        }   
+        else if(size === "folder"){
+          location.href = "https://github.com/" + username + "/" + repo + "/" + "tree/" + branch + "/" + path;
+        }
+        else{     
+          location.href = "https://github.com/" + username + "/" + repo + "/" + "blob/" + branch + "/" + path;              
+        }
+      }  		
   	}
   	else{
 		//console.log("no item selected");
