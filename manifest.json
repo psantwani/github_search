@@ -1,7 +1,7 @@
 {
   "name": "GitHub Searchlite",
   "short_name" : "Git Search",
-  "author" : "Piyush Santwani",
+  "author" : "Piyush C. Santwani",
   "version": "0.0.5",
   "manifest_version": 2,
   "description": "Search, navigate and download files from any git repository.",
