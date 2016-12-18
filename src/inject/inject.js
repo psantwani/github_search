@@ -187,6 +187,7 @@ function insertSearchBox(){
 
   	$("#" + domId).easyAutocomplete(options);	
   	$("#github_search_box_widget").css("display", "block");
+    $("#" + domId).focus();
   	
   }
 
@@ -196,6 +197,8 @@ function insertSearchBox(){
   	if(url.indexOf(searchStr) > -1){		
   		$(".github_search_box")[0].placeholder = url.split(searchStr)[1];
   	}
+  
+
 
   	$("#github_search_raw_button").click(function(){			
   		if(url.indexOf(searchStr) > -1){
