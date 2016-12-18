@@ -21,12 +21,14 @@
  #github_search_raw_button{
  	height: 30px;
  	width: 10%;	
- 	background-color: #ddd;
  	font-size: 13px;
  	border: rgb(204, 204, 204);
  	border-style: solid;
  	border-width: 1px;
  	border-radius: 0 4px 4px 0 !important;
+ 	background-image: linear-gradient(#fcfcfc, #eee);
+    cursor: pointer;
+    font-weight: 600;
  }
 
  #github_search_raw_button{
